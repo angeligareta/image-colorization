@@ -27,7 +27,7 @@ configuration of tensorflow data pipelines for a higher performance during train
 the training set. In each epoch, the validation accuracy and loss is printed. At the end of the
 training, the accuracy-loss plot is displayed for both train and validation set.
 
-- **Test Stage: It retrieves one batch of the validation set and prints 4 predictions compared to
+- **Test Stage**: It retrieves one batch of the validation set and prints 4 predictions compared to
 their original images.
 
 - **Convert custom pictures**: An image path can be added containing a black and white image and
