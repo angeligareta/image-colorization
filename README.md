@@ -15,13 +15,13 @@ This project aims to study the Image Colorization problem and implement a Deep N
 
 First, two image datasets will be collected and pre-processed, including the conversion to the CIELAB color space. Next, several Deep Neural Network (DNN) architectures including Convolutional Neural Networks (CNNs) and Autoencoders will be implemented using Tensorflow. Finally, the evaluation metric Mean Squared Error (MSE) will be selected to choose which of the implemented models performs better.
 
-The project [notebook]((notebooks/image_colorization.ipynb) is structured in the following sections:
+The [project notebook](notebooks/image_colorization.ipynb) is structured in the following sections:
 
 - **Data Preprocessing**: This section covers the preprocessing applied to the input data, including
 the conversion from rgb image to lab, the creation of the training and validation sets, and the
 configuration of tensorflow data pipelines for a higher performance during training.
 
-- **Model**s: It contains the implementation using Keras of the three models CNN, Autoencoder and CNN using Transfer Learning, alongside the trainable parameters for each one.
+- **Models**: It contains the implementation using Keras of the three models CNN, Autoencoder and CNN using Transfer Learning, alongside the trainable parameters for each one.
 
 - **Train Stage**: One of the previous models can be selected and trained with the images found in
 the training set. In each epoch, the validation accuracy and loss is printed. At the end of the
