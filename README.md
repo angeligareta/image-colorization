@@ -13,25 +13,24 @@ This project aims to study the Image Colorization problem and implement a Deep N
 
 ## Implementation
 
-First, two image datasets will be collected and pre-processed (e.g. converted to LAB color space) to be provided as an input for a deep learning model. Next, several Deep Neural Network (DNN) architectures including Convolutional Neural Networks (CNNs) and Autoencoders will be implemented using Tensorflow. Finally, the evaluation metric Mean Squared Error (MSE) will be selected to choose which of the implemented models performs better.
+First, two image datasets will be collected and pre-processed, including the conversion to the CIELAB color space. Next, several Deep Neural Network (DNN) architectures including Convolutional Neural Networks (CNNs) and Autoencoders will be implemented using Tensorflow. Finally, the evaluation metric Mean Squared Error (MSE) will be selected to choose which of the implemented models performs better.
 
-The project includes a [documented Jupyter Notebook](notebooks/image_colorization.ipynb) and a [final report](docs/report.pdf). The sections found in the notebook are:
+The project [notebook]((notebooks/image_colorization.ipynb) is structured in the following sections:
 
-- Data Preprocessing: This section covers the preprocessing applied to the input data, including
+- **Data Preprocessing**: This section covers the preprocessing applied to the input data, including
 the conversion from rgb image to lab, the creation of the training and validation sets, and the
 configuration of tensorflow data pipelines for a higher performance during training.
 
-- Models: It contains the implementation using Keras of the three models presented in the previous
-section, alongside the trainable parameters for each one.
+- **Model**s: It contains the implementation using Keras of the three models CNN, Autoencoder and CNN using Transfer Learning, alongside the trainable parameters for each one.
 
-- Train Stage: One of the previous models can be selected and trained with the images found in
+- **Train Stage**: One of the previous models can be selected and trained with the images found in
 the training set. In each epoch, the validation accuracy and loss is printed. At the end of the
 training, the accuracy-loss plot is displayed for both train and validation set.
 
-- Test Stage: It retrieves one batch of the validation set and prints 4 predictions compared to
+- **Test Stage: It retrieves one batch of the validation set and prints 4 predictions compared to
 their original images.
 
-- Convert custom pictures: An image path can be added containing a black and white image and
+- **Convert custom pictures**: An image path can be added containing a black and white image and
 the best model is used to predict its respective image in color.
 
 ### Data
