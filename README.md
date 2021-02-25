@@ -1,6 +1,4 @@
 <h1 align="center">Image Colorization</h1>
-<h4 align="center">Final project of the Scalable Machine Learning course of the EIT Digital data science master at <a href="https://www.kth.se/en">KTH</a></h4>
-
 <p align="center">
   <img alt="KTH" src="https://img.shields.io/badge/EIT%20Digital-KTH-%231954a6?style=flat-square" />  
   <img alt="License" src="https://img.shields.io/github/license/angeligareta/image-colorization?style=flat-square" />
