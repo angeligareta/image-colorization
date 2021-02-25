@@ -11,17 +11,34 @@
 
 Before Artificial Intelligence, image colorization was reserved to artists that aimed to give the original colors to a picture. In fact, professional image colorization is currently done by hand in Photoshop. Despite it is a challenging problem due to the multiple image conditions that need to be considered, nowadays, deep learning techniques have achieved promising results in this field.
 
-This project aims to study the Image Colorization problem of the Computer Vision branch and implement a Deep Neural Network that is able to colorize black and white images.
+This project aims to study the Image Colorization problem and implement a Deep Neural Network that is able to colorize black and white images using CIELAB color space.
 
 ## Implementation
 
-First, two image datasets will be collected and pre-processed to be provided as an input for a deep learning model. Next, several Deep Neural Network (DNN) architectures including Convolutional Neural Networks (CNNs) and Autoencoders will be implemented using a machine learning framework. Finally, the evaluation metric Mean Squared Error (MSE) will be selected to compare the implemented models on the selected datasets using hyper-tuning.
+First, two image datasets will be collected and pre-processed (e.g. converted to LAB color space) to be provided as an input for a deep learning model. Next, several Deep Neural Network (DNN) architectures including Convolutional Neural Networks (CNNs) and Autoencoders will be implemented using Tensorflow. Finally, the evaluation metric Mean Squared Error (MSE) will be selected to choose which of the implemented models performs better.
 
-The project includes a [documented implementation](notebooks/image_colorization.ipynb) and a [final report](docs/report.pdf).
+The project includes a [documented Jupyter Notebook](notebooks/image_colorization.ipynb) and a [final report](docs/report.pdf). The sections found in the notebook are:
+
+- Data Preprocessing: This section covers the preprocessing applied to the input data, including
+the conversion from rgb image to lab, the creation of the training and validation sets, and the
+configuration of tensorflow data pipelines for a higher performance during training.
+
+- Models: It contains the implementation using Keras of the three models presented in the previous
+section, alongside the trainable parameters for each one.
+
+- Train Stage: One of the previous models can be selected and trained with the images found in
+the training set. In each epoch, the validation accuracy and loss is printed. At the end of the
+training, the accuracy-loss plot is displayed for both train and validation set.
+
+- Test Stage: It retrieves one batch of the validation set and prints 4 predictions compared to
+their original images.
+
+- Convert custom pictures: An image path can be added containing a black and white image and
+the best model is used to predict its respective image in color.
 
 ### Data
 
-Regarding the data, two public datasets were used:
+Two public datasets were used:
 
 - Flickr 30k dataset: a public dataset which contains 30 thousand images in 200x200 resolution. It has become a standard benchmark for image captioning, but because of the variety of images that it contains, this dataset was used for final training and validation of the models [2].
 - Flickr 8k dataset: a subset of the previous dataset containing 8 thousand images in 200x200 resolution. It was used mostly for initial training of the models to understand the performance of the implemented models [3].
